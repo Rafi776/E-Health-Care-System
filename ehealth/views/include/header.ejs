@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %></title>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="full-nav-wrapper">
+        <nav class="navbar navbar-expand-sm justify-content-center">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="/doctors" class="nav-link">Our Doctors List</a>
+            </li>
+            <li class="nav-item">
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            <% if(userType!=null){ %>
+            <li class="nav-item">
+              <a href="/logout" class="nav-link">logout</a>
+            </li>
+            <% }else{ %>
+            <li class="nav-item">
+              <a href="/login" class="nav-link">login</a>
+            </li>
+            <% } if(userType=="admin") { %>
+            <li class="nav-item">
+              <a href="/waiting-doctor" class="nav-link">waiting-doctor</a>
+            </li>
+            <% } if(userType=="doctor") { %>
+            <li class="nav-item">
+              <a href="/visitors-patient" class="nav-link"
+                >Patients waiting for prescription</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="/my-patient-history" class="nav-link"
+                >MY patient history</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="/registration" class="nav-link">Register a Patient</a>
+            </li>
+            <% } if(userType=="patient"){ %>
+            <li class="nav-item">
+              <a href="/appoinment-list" class="nav-link">Appoinment list</a>
+            </li>
+            <% } %>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </body>
+</html>

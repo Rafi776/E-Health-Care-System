@@ -1,0 +1,68 @@
+<%- include('../include/header.ejs'); %>
+
+<link rel="stylesheet" href="css/login.css" />
+
+<div class="full-login-box">
+  <div class="user-logo">
+    <i class="far fa-user" style="font-size: 48px"></i>
+  </div>
+
+  <div class="container">
+    <form action="/doctor-registration" method="post">
+      <div class="form-group">
+        <label for="firstName">firstName</label>
+        <input
+          type="text"
+          name="firstName"
+          class="form-control"
+          id="firstName"
+        />
+        <p style="color: red"><%= firstNameErr %></p>
+      </div>
+      <div class="form-group">
+        <label for="lastName">lastName</label>
+        <input type="text" name="lastName" class="form-control" id="lastName" />
+      </div>
+      <div class="form-group">
+        <label for="imagePath">imagePath</label>
+        <input
+          type="text"
+          name="imagePath"
+          class="form-control"
+          id="imagePath"
+        />
+        <p style="color: red"><%= imagePathErr %></p>
+      </div>
+      <div class="form-group">
+        <label for="userName">userName</label>
+        <input type="text" name="userName" class="form-control" id="userName" />
+        <p style="color: red"><%= userNameErr %></p>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          class="form-control"
+          id="password"
+        />
+        <p style="color: red"><%= passwordErr %></p>
+      </div>
+      <div class="form-group">
+        <label for="speciality">speciality</label>
+        <input
+          type="speciality"
+          name="speciality"
+          class="form-control"
+          id="speciality"
+        />
+        <p style="color: red"><%= specialityErr %></p>
+      </div>
+      <button type="submit" class="btn btn-primary">
+        Register as a doctor
+      </button>
+    </form>
+  </div>
+</div>
+
+<%- include('../include/footer.ejs'); %>

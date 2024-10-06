@@ -1,0 +1,28 @@
+<%- include('../include/header.ejs'); %>
+
+<link rel="stylesheet" href="css/login.css">
+<div class="container">
+  <div class="full-login-box">
+    <div class="user-logo">
+      <i class="far fa-user" style="font-size: 48px"></i>
+    </div>
+    <form action="/login" method="post">
+      <div class="form-group">
+        <label for="userName"><i class="fas fa-user-alt" style="font-size: 25px;"></i></label>
+        <input type="text" name="userName" class="form-control" placeholder="username" />
+        <p style="color: red"><%= userNameErr %></p>
+      </div>
+      <div class="form-group">
+        <label for="password"><i class="fa fa-lock" style="font-size: 25px;"></i></label>
+        <input type="text" name="password" class="form-control" placeholder="..........."/>
+        <p style="color: red"><%= passwordErr %></p>
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+      <div class="login-bottom d-flex">
+        <p>don't have a account? </p>  <a href="/doctor-registration">register</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<%- include('../include/footer.ejs'); %>

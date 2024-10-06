@@ -1,0 +1,117 @@
+body{
+    background-color: aquamarine;
+}
+
+nav ul li{
+    background-color: black;
+    border-radius: 10px;
+    margin-right: 2em;
+}
+
+nav ul li a{
+    color:aquamarine;
+}
+
+nav ul li a:hover{
+    text-decoration: none;
+    color:rgb(241, 192, 192);
+    transition: 0.3s ease-in all;
+}
+
+.full-nav-wrapper{
+    margin-top:0.5em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background-color: aquamarine;
+}
+
+.footer-wrapper{
+    background-color: aquamarine;
+    text-align: center;
+    margin:2em 0em 2em 0em;
+    padding: 1.5em;
+    justify-content: center;
+}
+
+.footer-wrapper p{
+    padding:0.5em;
+    background-color: black;
+    color:aquamarine;
+    width: 50%;
+    justify-content: center;
+    margin: auto;
+}
+
+.doctor-list{
+    margin:2em 0em 2em 0em;
+    color:white;
+    text-align: center;
+    justify-content: center;
+}
+
+.doctor-list .card{
+    background-color: black;
+}
+
+.doctor-list h4{
+    font-weight: 100;
+}
+
+.doctor-list .doctor-speciality{
+    background-color: white;
+    padding: 0.3em;
+    width: 80%;
+    margin: auto;
+    color:rgb(240, 184, 184);
+    font-weight: 600;
+}
+
+.doctor-list button{
+    margin:0.5em 0em 1em 0em;
+    width: 80%;
+}
+
+.doctor-list img{
+    margin-bottom: 1em;
+}
+
+.search-bar{
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input {
+    width: 50%;
+}
+
+.search-bar button{
+    margin-left: -2%;
+}
+
+
+
+
+
+/* search results  */
+
+
+
+
+#search-result{
+    text-align: center;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    height: auto;
+  }
+  
+  #search-result ul li {
+      list-style-type: none;
+  }
+  
+  #search-result ul li a{
+      color:grey;
+      font-size:18px;
+  }
+  
+  #search-result ul li a:hover{
+      text-decoration: none;
+  }

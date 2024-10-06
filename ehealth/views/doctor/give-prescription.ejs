@@ -1,0 +1,12 @@
+<%- include('../include/header.ejs'); %>
+<div class="container">
+    <form action="/give-prescription" method="post">
+        <div class="form-group">
+            <label> Please enter all the Prescription separated with ; </label>
+            <input type="text" name="drugsName" class="form-control">
+            <input type="hidden" value="<%= appoinmentId %>" name="appoinmentId">
+            <button class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+<%- include('../include/footer.ejs'); %>

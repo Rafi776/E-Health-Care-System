@@ -1,0 +1,41 @@
+<%- include('../include/header.ejs'); %>
+
+<link rel="stylesheet" href="css/login.css" />
+
+<div class="full-login-box">
+  <div class="user-logo">
+    <i class="far fa-user" style="font-size: 48px"></i>
+  </div>
+
+  <div class="container">
+    <form action="/registration" method="post">
+      <div class="form-group">
+        <label for="firstName">firstName</label>
+        <input
+          type="text"
+          name="firstName"
+          class="form-control"
+          id="firstName"
+        />
+        <p style="color: red"><%= firstNameErr %></p>
+      </div>
+      <div class="form-group">
+        <label for="lastName">lastName</label>
+        <input type="text" name="lastName" class="form-control" id="lastName" />
+      </div>
+      <div class="form-group">
+        <label for="userName">userName</label>
+        <input type="text" name="userName" class="form-control" id="userName" />
+        <p style="color: red"><%= userNameErr %></p>
+      </div>
+      <button type="submit" class="btn btn-primary">Register a patient</button>
+
+      <div class="login-bottom d-flex">
+        <p>alredy have a acoount? </p> <a href="/login">Login</a>
+      </div>
+      
+    </form>
+  </div>
+</div>
+
+<%- include('../include/footer.ejs'); %>

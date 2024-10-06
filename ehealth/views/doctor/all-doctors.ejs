@@ -1,0 +1,23 @@
+<%- include('../include/header.ejs'); %>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <% for(let doctor of doctors){ %>   
+            <div class="doctor-list col-sm-3">
+                <div class="card">
+                    <img src="<%= doctor.imagePath %>" alt="<%= doctor.firstName %>" class="card-img-top img-fluid">
+                    <h4>First Name: <%= doctor.firstName %></h4>
+                    <h4>Last Name: <%= doctor.lastName %></h4>
+                    <h4 class="doctor-speciality"><%= doctor.speciality %></h2>
+                    <form action="/doctor-appoinment" method="post">
+                        <input type="hidden" name="doctorName" value="<%= doctor.firstName%>">
+                        <input type="hidden" name="doctorId" value="<%= doctor.id%>">
+                        
+                    </form>
+                </div>
+            </div>    
+        <%   } %>
+    </div>
+</div>
+
+<%- include('../include/footer.ejs'); %>

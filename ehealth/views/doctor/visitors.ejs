@@ -1,0 +1,36 @@
+<%- include('../include/header.ejs') %>
+
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Appoinment Id</th>
+                <th>patient Id</th>
+                <th>patient Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let appoinment of appoinments){ %>  
+                
+                <tr>
+                    <td><%= appoinment.id %></td>
+                    <td><%= appoinment.patientId %></td>
+                    <td><a href="/patient-appoinment-details/<%= appoinment.patientId %>"> <%= appoinment.patientName %> </a></td>
+                    <td><a href="/give-prescription/<%= appoinment.id %>">Give Prescription</a></td>
+                </tr>
+
+            <%   } %>
+
+
+           
+                   
+                
+        </tbody>
+    </table>
+</div>
+
+
+
+
+<%- include('../include/footer.ejs') %>

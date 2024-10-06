@@ -1,0 +1,16 @@
+<%- include('../include/header.ejs'); %>
+
+<div class="container">
+    <h1>THis is prescription list</h1>
+    <%  if(prescription) { 
+       let drugsArray =  prescription.drugsName.split(';'); 
+       for(let drug of drugsArray) { %> 
+            <h1><%= drug %></h1>
+        <%} 
+    }else{ %>  
+        <h1>Not prescripted yet !!!</h1> 
+    <% } %>
+</div>
+
+<%- include('../include/footer.ejs'); %>
+
